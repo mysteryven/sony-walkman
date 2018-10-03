@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+ul, ol {
+    list-style: none;
+}
+html, body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    background-color: #444444;
+    width: 390px;
+    height: 710px;
+    margin: 200px auto;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 4px 2px 16px #404040;
+    border: 1px solid #7d7d7d;
+}
+main {
+    width: 375px;
+    height: 660px;
+    border: 1px solid #6e6e6e;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+main nav {
+    z-index: 1;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    padding: 4px;
+}
