@@ -1,45 +1,66 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>音乐播放器</title>
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/icon.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>音乐播放器</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/icon.css">
 </head>
+
 <body>
-<div class="container">
+  <div class="container">
     <header>
-        <svg class="icon logo-header" aria-hidden="true">
-            <use xlink:href="#icon-SONYLOGO"></use>
-        </svg>
+      <svg class="icon logo-header" aria-hidden="true">
+        <use xlink:href="#icon-SONYLOGO"></use>
+      </svg>
     </header>
     <main>
-        <nav>
-            Mysteryven's Music Player
-        </nav>
-        <section>
-            <h2>我的歌单</h2>
-            <ul>
-                <li>
-                    <div>
-                        <img src="" alt="">
-                    </div>
-                    <div>
-                        <h5>歌单名称</h5>
-                        <div>100首</div>
-                    </div>
-                </li>
-                <li></li>
-                <li></li>
-            </ul>
-        </section>
+      <nav>
+        <ul>
+          <li class="active">
+            <span>我的</span>
+          </li>
+          <li>
+            <span>发现</span>
+          </li>
+          <li>
+            <span>搜索</span>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h5>
+          <svg class="icon arrow" aria-hidden="true">
+            <use xlink:href="#icon-arrow-down"></use>
+          </svg>
+          <span>创建的歌单</span>
+        </h5>
+        <ul>
+          <li>
+            <div class="song-cover">
+              <img src="logo-footer.png" alt="">
+            </div>
+            <div class="song-right">
+              <div class="song-info">
+                <div>歌单名称</div>
+                <div>100首</div>
+              </div>
+              <div>
+                ...
+              </div>
+            </div>
+          </li>
+          <li></li>
+          <li></li>
+        </ul>
+      </section>
     </main>
     <footer>
     </footer>
-</div>
-<script src="//at.alicdn.com/t/font_860869_jxnzfsuu9ac.js"></script>
+  </div>
+  <script src="//at.alicdn.com/t/font_860869_6xcaisoh3da.js"></script>
 </body>
 </html>
