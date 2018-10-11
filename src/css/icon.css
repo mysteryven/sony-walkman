@@ -1,18 +1,19 @@
 .icon { width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor;
-    overflow: hidden; }
+    overflow: hidden; cursor: pointer;}
 
 svg.logo-header{ width: 80px; height: 30px; display: block;
     margin: 0 auto; }
 svg.logo-footer{ width: 30px; height: 30px; display: block;
     position: absolute; bottom: 10px; right: 25px; }
 
-.arrow { width: 39px; height: 25px; }
-.icon.operation { width: 24px; height: 30px; }
-.icon.current-play { width: 50px; height: 32px; }
-.icon.player-arrow {
-    width: 40px;
-    height: 40px;    
+.icon.wifi, .icon.battery {
+    width: 20px;
+    height: 20px;
 }
-.icon.player-play {
-    width: 64px; height: 64px;
-}
+
+
+.arrow { width: 39px; height: 25px;}
+.icon.operation { width: 24px; height: 30px;}
+.icon.current-play { width: 50px; height: 32px;}
+.icon.player-play { width: 64px; height: 64px;}
+.icon.player-arrow { width: 44px; height: 44px; cursor: pointer;}

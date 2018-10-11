@@ -1,32 +1,45 @@
 section.player {
     position: absolute;
     width: 375px;
-    height: 615px;
+    height: 0px;
     background-color: white;
     bottom: 0px;
     left: 0px;
-    box-shadow: 0px 0px 999px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 999px rgba(0, 0, 0, 0.8);
+    transition: height 0.5s;
+}
+section.player.active {
+    display: block;
+    height: 615px;
 }
 .player-close {
     position: absolute;
     top: 4px;
     left: 4px;
 }
-.player-cover {
-    width: 100%;
-    height: 370px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+section.player .player-cover {
+    margin: 280px 0 0 76px;
+    width: 23px;
+    height: 23px;
+    border-radius: 1px;
+    background-size: cover;
+    transition-delay: 0.1s;
+    transition: all 0.4s;
+    transform-origin:left bottom;
 }
-.player-cover img {
-    border-radius: 4px;
+section.player.active .player-cover {
+    transform: scale(10);
 }
 
+.player-information {
+    margin-top: 50px;
+}
 .player-information > h2, .player-information > div {
     text-align: center;
 }
 .player-controllers {
-    padding-top: 44px;
-    text-align: center;
+    margin: 44px 32px 0px 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }

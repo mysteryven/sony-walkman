@@ -23,7 +23,15 @@
     </header>
     <main>
       <nav>
-        <ul>
+        <div class="status-bar">
+            <svg class="icon wifi" aria-hidden="true">
+                <use xlink:href="#icon-wifi"></use>
+            </svg> 
+            <svg class="icon battery" aria-hidden="true">
+                <use xlink:href="#icon-tecbatterycha"></use>
+            </svg>
+        </div>
+        <ul id="switchTab">
           <li class="active"> <span>我的</span> </li>
           <li> <span>发现</span> </li>
           <li> <span>搜索</span> </li>
@@ -31,15 +39,15 @@
       </nav>
       <section>
         <h5>
-          <svg class="icon arrow" aria-hidden="true">
+          <svg class="icon arrow song-list-control" aria-hidden="true" id="controlSongList">
             <use xlink:href="#icon-arrow-down"></use>
           </svg>
           <span>创建的歌单</span>
         </h5>
-        <ul>
+        <ul class="active">
           <li>
             <div class="song-cover">
-              <img src="logo-footer.png" alt="" width=60 height=60>
+              <img src="./img/cover.jpeg" alt="" width=60 height=60>
             </div>
             <div class="song-right">
               <div class="song-info">
@@ -55,9 +63,9 @@
           </li>
         </ul>
       </section>
-      <footer>
+      <footer id="currentSong">
         <div class="current-cover">
-          <img src="logo-footer.png" alt="" width=50 height=50>
+          <img src="./img/cover.jpeg" alt="" width=50 height=50>
         </div>
         <div class="current-info">
           <div class="song-info">
@@ -71,28 +79,34 @@
           </div>
         </div>  
       </footer>
-      <section class="player">
+      <section class="player" id="player">
         <div class="player-close">
-          <svg class="icon player-arrow" aria-hidden="true">
+          <svg class="icon player-arrow" aria-hidden="true" id="close">
             <use xlink:href="#icon-arrow-down"></use>
           </svg>
         </div>
-        <div class="player-cover">
-          <img src="./logo-footer.png" alt="" width=260 height=260>
-        </div>
+        <div class="player-cover" style="background-image: url(./img/cover.jpeg)"> </div>
         <div class="player-information">
           <h2>Name</h2>
           <div>Singer</div>
         </div>
         <div class="player-controllers">
+          <svg class="icon player-arrow" aria-hidden="true">
+            <use xlink:href="#icon-right-arrow-copy"></use>
+          </svg>
           <svg class="icon player-play" aria-hidden="true">
-              <use xlink:href="#icon-play"></use>
-            </svg> 
+            <use xlink:href="#icon-play"></use>
+          </svg> 
+          <svg class="icon player-arrow" aria-hidden="true">
+            <use xlink:href="#icon-icverticleright-copy"></use>
+          </svg>
         </div>
       </section>
     </main>
       
   </div>
-  <script src="//at.alicdn.com/t/font_860869_am7hvebb6a7.js"></script>
+  <script src="//at.alicdn.com/t/font_860869_xkrv7thdkih.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 </html>
