@@ -31,7 +31,9 @@ section.player.active .player-cover {
     transform: scale(10);
 }
 section.player.playing .player-cover {
-    transform: scale(12) translateX(-2px);
+    transition: all 0.2s;
+    transform: scale(12);
+    margin-left: 54px;
 }
 section.player.playing #playButton, section.player #pauseButton {
     display: none;
