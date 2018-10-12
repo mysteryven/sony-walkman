@@ -24,6 +24,18 @@
         $('#player').removeClass('playing')
     })
 
+    $('#currentPlay').on('click', (e) => {
+        beActive('#currentPause')
+        $('#player').addClass('playing')
+        e.stopPropagation()
+    })
+    $('#currentPause').on('click', (e) => {
+        beActive('#currentPlay')
+        e.stopPropagation()
+        $('#player').removeClass('playing')
+    })
+
+
 
     function toggleActive(e) {
         console.log(e.currentTarget)
