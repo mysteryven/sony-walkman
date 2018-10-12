@@ -9,7 +9,7 @@ section.player .player-cover { margin: 310px 0 0 76px; width: 23px; height: 23px
     transition: all 0.4s; transform-origin:left bottom; }
 section.player.active .player-cover { transform: scale(10); }
 section.player.playing .player-cover { transition: all 0.2s; transform: scale(12);
-    margin-left: 54px; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4) }
+    margin-left: 54px; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);}
 section.player.playing #playButton, section.player #pauseButton { display: none; }
 section.player.playing #pauseButton, section.player #playButton { display: block; }
 
