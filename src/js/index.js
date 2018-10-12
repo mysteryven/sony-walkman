@@ -14,7 +14,14 @@
     $('#controlSongList').on('click', (e) => {
        toggleActive(e.currentTarget)
        let $ul = $(e.currentTarget).parent().next() 
-        $ul.toggleClass('active')
+       $ul.toggleClass('active')
+    })
+
+    $('#playButton').on('click', (e) => {
+        $('#player').addClass('playing')
+    })
+    $('#pauseButton').on('click', (e) => {
+        $('#player').removeClass('playing')
     })
 
 

@@ -18,7 +18,7 @@ section.player.active {
     left: 4px;
 }
 section.player .player-cover {
-    margin: 280px 0 0 76px;
+    margin: 310px 0 0 76px;
     width: 23px;
     height: 23px;
     border-radius: 1px;
@@ -29,6 +29,15 @@ section.player .player-cover {
 }
 section.player.active .player-cover {
     transform: scale(10);
+}
+section.player.playing .player-cover {
+    transform: scale(12) translateX(-2px);
+}
+section.player.playing #playButton, section.player #pauseButton {
+    display: none;
+}
+section.player.playing #pauseButton, section.player #playButton {
+    display: block;
 }
 
 .player-information {
