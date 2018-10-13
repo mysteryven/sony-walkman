@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/footer.css">
   <link rel="stylesheet" href="./css/play.css">
+  <link rel="stylesheet" href="./css/page-my.css">
+  <link rel="stylesheet" href="./css/page-find.css">
+  <link rel="stylesheet" href="./css/page-search.css">
 </head>
 
 <body>
@@ -38,32 +41,86 @@
           <li id="search"> <a href="/search">搜索</a> </li>
         </ul>
       </nav>
-      <section>
-        <h5>
-          <svg class="icon arrow song-list-control" aria-hidden="true" id="controlSongList">
-            <use xlink:href="#icon-arrow-down"></use>
-          </svg>
-          <span>创建的歌单</span>
-        </h5>
-        <ul class="active">
-          <li>
-            <div class="song-cover">
-              <img src="./img/cover.jpeg" alt="" width=60 height=60>
-            </div>
-            <div class="song-right">
-              <div class="song-info">
-                <div>歌单名称</div>
-                <div>100首</div>
+      
+      <div class="pages" id="pages">
+        <section class="page-my">
+          <h5>
+            <svg class="icon arrow song-list-control" aria-hidden="true" id="controlSongList">
+              <use xlink:href="#icon-arrow-down"></use>
+            </svg>
+            <span>创建的歌单</span>
+          </h5>
+          <ul class="active">
+            <li>
+              <div class="song-cover">
+                <img src="./img/cover.jpeg" alt="" width=60 height=60>
               </div>
-              <div>
-                <svg class="icon operation" aria-hidden="true">
-                  <use xlink:href="#icon-verticaldots"></use>
+              <div class="song-right">
+                <div class="song-info">
+                  <div>歌单名称</div>
+                  <div>100首</div>
+                </div>
+                <div>
+                  <svg class="icon operation" aria-hidden="true">
+                    <use xlink:href="#icon-verticaldots"></use>
+                  </svg>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="page-find">
+          <h5>
+            <span>推荐歌单</span>
+            <svg class="icon arrow" aria-hidden="true" id="controlSongList">
+                <use xlink:href="#icon-rightarrow"></use>
+            </svg> 
+          </h5>
+          <ul>
+            <li>
+                <img src="./img/girl.jpeg" width=113px height=113px>
+                <div>
+                  <span>寻找周杰伦</span>
+                  <span>周杰伦</span>
+                </div>
+              </li>
+          </ul>
+          <h5>
+              <span>最近音乐</span>
+              <svg class="icon arrow" aria-hidden="true" id="controlSongList">
+                  <use xlink:href="#icon-rightarrow"></use>
+              </svg>
+            </h5>
+            <ul>
+              <li>
+                  <img src="./img/girl.jpeg" width=113px height=113px>
+                  <div>
+                    <span>寻找周杰伦</span>
+                    <span>周杰伦</span>
+                  </div>
+               </li>
+            </ul>
+        </section>
+        <section class="page-search">
+          <form>
+            <div>
+              <input type="text" placeholder="歌名">
+            </div>
+            <div>
+              <button type="submit">
+                <svg class="icon search-icon" aria-hidden="true">
+                  <use xlink:href="#icon-search"></use>
                 </svg>
-              </div>
+              </button>
             </div>
-          </li>
-        </ul>
-      </section>
+            
+          </form>
+          <ul>
+            <li> 歌曲1 </li>
+          </ul>
+        </section>
+      </div>
+      
       <footer id="currentSong">
         <div class="current-cover">
           <img src="./img/cover.jpeg" alt="" width=50 height=50>
@@ -115,7 +172,7 @@
     </main>
       
   </div>
-  <script src="//at.alicdn.com/t/font_860869_jkjrc3bqaf.js"></script>
+  <script src="//at.alicdn.com/t/font_860869_5r1xpwyagvy.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="./js/index.js"></script>
   <script src="./js/clock.js"></script>

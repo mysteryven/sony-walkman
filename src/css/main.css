@@ -1,5 +1,5 @@
 main { width: 375px; height: 640px; border: 1px solid #6e6e6e;
-    background-color: white; margin: 0 auto; position: relative; overflow: hidden; }
+    background-color: white; margin: 0 auto; position: relative; overflow: hidden;}
 
 main nav .status-bar { background-color: #282828; text-align: right; padding-right: 4px; }
 main nav .status-bar svg { margin-left: 4px; }
@@ -10,12 +10,9 @@ main nav ul li a { cursor: pointer; display: inline-block; padding-bottom: 2px; 
 main nav ul li.active { color: white; }
 main nav ul li.active::after { content: ''; display: block; width: 100%; height: 3px; border-radius: 4px;
     background-color: white; }
-    
-main section ul {display: none;}
-main section ul.active {display: block;}
-main section ul li { display: flex; justify-content: space-between;   flex-wrap: nowrap; margin: 4px 0 4px 8px; }
-main section > h5 { font-weight: 400; font-size: 16px; display: flex; justify-content: flex-start;
-    background-color: #dfdede; padding: 4px; }
+
+main div.pages { transition: transform 0.4s; width: 1170px; display: flex; }
+main div.pages section { flex: 1; width: 375px; }
 
 .song-cover img{ border-radius: 8px; }
 .song-cover { flex-grow: 0; }
@@ -24,3 +21,4 @@ main section > h5 { font-weight: 400; font-size: 16px; display: flex; justify-co
 
 .song-list-control { transition: all 0.3s; }
 .song-list-control.active { transform: rotate(-90deg); }
+

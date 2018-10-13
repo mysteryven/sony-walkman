@@ -1,0 +1,28 @@
+.page-search form{
+    margin-top: 8px;
+    display: flex;
+}
+.page-search input {
+    width: 350px;
+    font-size: 16px;
+    padding: 8px 30px;
+    text-align: center;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background-color: #eee;
+    margin-left: 14px;
+}
+.page-search button {
+    position: relative;
+    top: 7px;
+    left: -27px;
+    outline: none;
+    border: none;
+    display: block;
+    background-color: #eee;
+}
+.page-search button .icon.search {
+    width: 20px;
+    height: 20px;
+}

@@ -1,4 +1,4 @@
-main footer { height: 56px; padding: 4px 4px 0 4px; margin-bottom: 1px; position: absolute; border-top: 1px solid #eee;
+main footer { background-color: white; height: 56px; padding: 4px 4px 0 4px; margin-bottom: 1px; position: absolute; border-top: 1px solid #eee;
 	bottom: 0; width: 100%; left: 0; display: flex; justify-content: flex-start; cursor: pointer; }
 main footer .current-cover { flex-grow: 0; }
 main footer .current-cover img { border-radius: 4px; }

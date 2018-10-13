@@ -12,8 +12,12 @@
         let str = location.hash
         let currentTab = str.substring(2, str.length-2) || 'my'
 
-        $('#' + currentTab).addClass('active')
-            .siblings('.active').removeClass('active')
+        $('#' + currentTab).addClass('active').siblings('.active').removeClass('active')
+        
+        let index = $('#' + currentTab).index()
+        $('#pages').css({
+            'transform': `translateX(${-index*390}px)`
+        })
 
         let isPlaying = str.charAt(str.length - 1) === 'y' ? true : false
         if (isPlaying) {
