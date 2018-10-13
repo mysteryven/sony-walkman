@@ -1,5 +1,6 @@
 .page-search form{
     margin-top: 8px;
+    margin-bottom: 16px;
     display: flex;
 }
 .page-search input {
@@ -25,4 +26,29 @@
 .page-search button .icon.search {
     width: 20px;
     height: 20px;
+}
+.playList li{
+    margin: 4px 16px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.playList li .item{
+    display: flex;
+    flex-direction: column;
+}
+
+.playList li .item span:first-child {
+    color: #1c90f3;
+    font-weight: 500;
+}
+.playList li .item span:nth-child(2) {
+    color: #757575;
+    font-size: 10px;
+}
+.playList li .item span:nth-child(3) {
+    font-size: 10px;
+    color: #757575;
 }
