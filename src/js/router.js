@@ -4,12 +4,22 @@
     $('#switchTab > li > a').on('click', (e) => {
         e.preventDefault()
 
-        let href = e.currentTarget.getAttribute('href')
-        location.hash = href.substring(2, href.length)
-
+        location.hash = e.currentTarget.getAttribute('href') + '-n'
         selectTab()
     })    
 
     function selectTab() {
+        let str = location.hash
+        let currentTab = str.substring(2, str.length-2) || 'my'
+
+        $('#' + currentTab).addClass('active')
+            .siblings('.active').removeClass('active')
+
+        let isPlaying = str.charAt(str.length - 1) === 'y' ? true : false
+        if (isPlaying) {
+            $('#player').addClass('active')
+        } else {
+            $('#player').removeClass('active')
+        }
     }
 }

@@ -1,10 +1,12 @@
 {
     $('#currentSong').on('click', () => {
         beActive('#player')
+        location.hash = location.hash.replace('-n', '-y')
     })
 
     $('#close').on('click', () => {
         disActive('#player')
+        location.hash = location.hash.replace('-y', '-n')
     })
 
     $('#controlSongList').on('click', (e) => {
