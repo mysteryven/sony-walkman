@@ -35,6 +35,17 @@
         $('#player').removeClass('playing')
     })
 
+    $('#createSongList li').on('click', () => {
+        $('#songList').css({
+            'transform': 'translateX(0px)',
+        })
+    })
+    $('#back').on('click', () => {
+        $('#songList').css({
+            'transform': 'translateX(375px)',
+        })
+    })
+
     function toggleActive(e) {
         console.log(e.currentTarget)
         $(e).toggleClass('active');

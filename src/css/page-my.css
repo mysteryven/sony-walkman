@@ -1,4 +1,4 @@
-main section.page-my ul {display: none; height: 520px;}
+main section.page-my ul {display: none; height: 520px;overflow: auto;}
 main section.page-my ul.active {display: block;}
 main section.page-my ul li { display: flex; justify-content: space-between;   flex-wrap: nowrap; margin: 4px 0 4px 8px; }
 main section.page-my > h5 { font-weight: 400; font-size: 16px; display: flex; justify-content: flex-start;
