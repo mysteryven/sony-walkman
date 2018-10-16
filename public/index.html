@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -17,18 +16,7 @@
   <link rel="stylesheet" href="./css/page-search.css">
   <link rel="stylesheet" href="./css/songList.css">
 </head>
-
 <body>
-  <button onclick="test()">search</button>
-  <script>
-    function test() {
-      console.log(1)
-      axios.get('/search?keywords= 海阔天空')
-        .then(function (response) {
-          console.log(response)
-        })
-    }
-  </script>
   <div class="container">
     <header>
       <svg class="icon logo-header" aria-hidden="true">
@@ -117,28 +105,8 @@
             </li>
           </ul>
         </section>
-        <section class="page-search">
-          <form>
-            <div>
-              <input type="text" placeholder="歌名">
-            </div>
-            <div>
-              <button type="submit">
-                <svg class="icon search-icon" aria-hidden="true">
-                  <use xlink:href="#icon-search"></use>
-                </svg>
-              </button>
-            </div>
-          </form>
-          <ul class="playList">
-            <li>
-              <div class="item">
-                <span>Minuet in G</span>
-                <span>Johann Seber</span>
-                <span>专辑</span>
-              </div>
-            </li>
-          </ul>
+        <section class="page-search" id="searchPage">
+          
         </section>
       </div>
       <div class="song-list" id="songList">
@@ -157,61 +125,6 @@
           </div>
           <ul>
             <li>
-              <div class="index">1</div>
-              <div class="song-info">
-                <span>穿越时空的思念</span>
-                <span>奏有</span>
-              </div>  
-            </li>
-            <li>
-              <div class="index">1</div>
-              <div class="song-info">
-                <span>穿越时空的思念</span>
-                <span>奏有</span>
-              </div>  
-            </li><li>
-              <div class="index">1</div>
-              <div class="song-info">
-                <span>穿越时空的思念</span>
-                <span>奏有</span>
-              </div>  
-            </li><li>
-              <div class="index">1</div>
-              <div class="song-info">
-                <span>穿越时空的思念</span>
-                <span>奏有</span>
-              </div>  
-            </li><li>
-              <div class="index">1</div>
-              <div class="song-info">
-                <span>穿越时空的思念</span>
-                <span>奏有</span>
-              </div>  
-            </li><li>
-              <div class="index">1</div>
-              <div class="song-info">
-                <span>穿越时空的思念</span>
-                <span>奏有</span>
-              </div>  
-            </li><li>
-              <div class="index">1</div>
-              <div class="song-info">
-                <span>穿越时空的思念</span>
-                <span>奏有</span>
-              </div>  
-            </li><li>
-              <div class="index">1</div>
-              <div class="song-info">
-                <span>穿越时空的思念</span>
-                <span>奏有</span>
-              </div>  
-            </li><li>
-              <div class="index">1</div>
-              <div class="song-info">
-                <span>穿越时空的思念</span>
-                <span>奏有</span>
-              </div>  
-            </li><li>
               <div class="index">1</div>
               <div class="song-info">
                 <span>穿越时空的思念</span>
@@ -263,7 +176,6 @@
               <use xlink:href="#icon-pause"></use>
             </svg>
           </div>
-
           <svg class="icon player-arrow" aria-hidden="true">
             <use xlink:href="#icon-icverticleright-copy"></use>
           </svg>
@@ -278,5 +190,6 @@
   <script src="./js/index.js"></script>
   <script src="./js/clock.js"></script>
   <script src="./js/router.js"></script>
+  <script src="./js/search.js"></script>
 </body>
 </html>
