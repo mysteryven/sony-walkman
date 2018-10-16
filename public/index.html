@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>音乐播放器</title>
+  <link rel="icon" type="image/png" href="https://i.loli.net/2018/10/11/5bbeb2628bc14.png">
+  <link rel="stylesheet" href="./css/basic.css">
+  <link rel="stylesheet" href="./css/icon.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/play.css">
+  <link rel="stylesheet" href="./css/page-my.css">
+  <link rel="stylesheet" href="./css/page-find.css">
+  <link rel="stylesheet" href="./css/page-search.css">
+  <link rel="stylesheet" href="./css/songList.css">
+</head>
+
+<body>
+  <button onclick="test()">search</button>
+  <script>
+    function test() {
+      console.log(1)
+      axios.get('/search?keywords= 海阔天空')
+        .then(function (response) {
+          console.log(response)
+        })
+    }
+  </script>
+  <div class="container">
+    <header>
+      <svg class="icon logo-header" aria-hidden="true">
+        <use xlink:href="#icon-SONYLOGO"></use>
+      </svg>
+    </header>
+    <main>
+      <nav>
+        <div class="status-bar">
+          <svg class="icon wifi" aria-hidden="true">
+            <use xlink:href="#icon-wifi"></use>
+          </svg>
+          <svg class="icon battery" aria-hidden="true">
+            <use xlink:href="#icon-tecbatterycha"></use>
+          </svg>
+          <span class="time" id="timer"></span>
+        </div>
+        <ul id="switchTab">
+          <li class="active" id="my">
+            <a href="/my">我的</a>
+          </li>
+          <li id="find">
+            <a href="/find">发现</a>
+          </li>
+          <li id="search">
+            <a href="/search">搜索</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="pages" id="pages">
+        <section class="page-my">
+          <h5>
+            <svg class="icon arrow song-list-control" aria-hidden="true" id="controlSongList">
+              <use xlink:href="#icon-arrow-down"></use>
+            </svg>
+            <span>创建的歌单</span>
+          </h5>
+          <ul class="active" id="createSongList">
+            <li>
+              <div class="song-cover">
+                <img src="./img/cover.jpeg" alt="" width=60 height=60>
+              </div>
+              <div class="song-right">
+                <div class="song-info">
+                  <div>歌单名称</div>
+                  <div>100首</div>
+                </div>
+                <div>
+                  <svg class="icon operation" aria-hidden="true">
+                    <use xlink:href="#icon-verticaldots"></use>
+                  </svg>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="page-find">
+          <h5>
+            <span>推荐歌单</span>
+            <svg class="icon arrow" aria-hidden="true" id="controlSongList">
+              <use xlink:href="#icon-rightarrow"></use>
+            </svg>
+          </h5>
+          <ul>
+            <li>
+              <img src="./img/girl.jpeg" width=113px height=113px>
+              <div>
+                <span>寻找周杰伦</span>
+                <span>周杰伦</span>
+              </div>
+            </li>
+          </ul>
+          <h5>
+            <span>最近音乐</span>
+            <svg class="icon arrow" aria-hidden="true" id="controlSongList">
+              <use xlink:href="#icon-rightarrow"></use>
+            </svg>
+          </h5>
+          <ul>
+            <li>
+              <img src="./img/girl.jpeg" width=113px height=113px>
+              <div>
+                <span>寻找周杰伦</span>
+                <span>周杰伦</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="page-search">
+          <form>
+            <div>
+              <input type="text" placeholder="歌名">
+            </div>
+            <div>
+              <button type="submit">
+                <svg class="icon search-icon" aria-hidden="true">
+                  <use xlink:href="#icon-search"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+          <ul class="playList">
+            <li>
+              <div class="item">
+                <span>Minuet in G</span>
+                <span>Johann Seber</span>
+                <span>专辑</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="song-list" id="songList">
+        <div class="song-list-header">
+          <svg class="icon arrow" aria-hidden="true" id="back">
+              <use xlink:href="#icon-leftarrowpx"></use>
+            </svg>
+          <span>歌单</span>
+        </div>
+        <div class="song-list-info">
+          <div class="song-list-cover">
+            <img src="./img/girl.jpeg" alt="" width=100 height=100>
+            <div>
+              <span>歌单名称</span>
+            </div>
+          </div>
+          <ul>
+            <li>
+              <div class="index">1</div>
+              <div class="song-info">
+                <span>穿越时空的思念</span>
+                <span>奏有</span>
+              </div>  
+            </li>
+            <li>
+              <div class="index">1</div>
+              <div class="song-info">
+                <span>穿越时空的思念</span>
+                <span>奏有</span>
+              </div>  
+            </li><li>
+              <div class="index">1</div>
+              <div class="song-info">
+                <span>穿越时空的思念</span>
+                <span>奏有</span>
+              </div>  
+            </li><li>
+              <div class="index">1</div>
+              <div class="song-info">
+                <span>穿越时空的思念</span>
+                <span>奏有</span>
+              </div>  
+            </li><li>
+              <div class="index">1</div>
+              <div class="song-info">
+                <span>穿越时空的思念</span>
+                <span>奏有</span>
+              </div>  
+            </li><li>
+              <div class="index">1</div>
+              <div class="song-info">
+                <span>穿越时空的思念</span>
+                <span>奏有</span>
+              </div>  
+            </li><li>
+              <div class="index">1</div>
+              <div class="song-info">
+                <span>穿越时空的思念</span>
+                <span>奏有</span>
+              </div>  
+            </li><li>
+              <div class="index">1</div>
+              <div class="song-info">
+                <span>穿越时空的思念</span>
+                <span>奏有</span>
+              </div>  
+            </li><li>
+              <div class="index">1</div>
+              <div class="song-info">
+                <span>穿越时空的思念</span>
+                <span>奏有</span>
+              </div>  
+            </li><li>
+              <div class="index">1</div>
+              <div class="song-info">
+                <span>穿越时空的思念</span>
+                <span>奏有</span>
+              </div>  
+            </li>
+          </ul>
+        </div>
+      </div>
+      <footer id="currentSong">
+        <div class="current-cover">
+          <img src="./img/cover.jpeg" alt="" width=50 height=50>
+        </div>
+        <div class="current-info">
+          <div class="song-info">
+            <span>千本樱</span>
+            <span>Animenzzz && Aayase</span>
+          </div>
+          <div>
+            <svg class="icon current-play active" aria-hidden="true" id="currentPlay">
+              <use xlink:href="#icon-play1"></use>
+            </svg>
+            <svg class="icon current-play" aria-hidden="true" id="currentPause">
+              <use xlink:href="#icon-pause"></use>
+            </svg>
+          </div>
+        </div>
+      </footer>
+      <section class="player" id="player">
+        <div class="player-close">
+          <svg class="icon player-arrow" aria-hidden="true" id="close">
+            <use xlink:href="#icon-arrow-down"></use>
+          </svg>
+        </div>
+        <div class="player-cover" style="background-image: url(./img/girl.jpeg)"> </div>
+        <div class="player-information">
+          <h2>Name</h2>
+          <div>Singer</div>
+        </div>
+        <div class="player-controllers">
+          <svg class="icon player-arrow" aria-hidden="true">
+            <use xlink:href="#icon-right-arrow-copy"></use>
+          </svg>
+          <div>
+            <svg class="icon player-play" aria-hidden="true" id="playButton">
+              <use xlink:href="#icon-play1"></use>
+            </svg>
+            <svg class="icon player-play" aria-hidden="true" id="pauseButton">
+              <use xlink:href="#icon-pause"></use>
+            </svg>
+          </div>
+
+          <svg class="icon player-arrow" aria-hidden="true">
+            <use xlink:href="#icon-icverticleright-copy"></use>
+          </svg>
+        </div>
+      </section>
+    </main>
+
+  </div>
+  <script src="./vendors/axios.js"></script>
+  <script src="//at.alicdn.com/t/font_860869_6g9hryonkza.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/clock.js"></script>
+  <script src="./js/router.js"></script>
+</body>
+</html>
