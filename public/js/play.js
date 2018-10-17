@@ -26,16 +26,21 @@ let view = {
     <svg class="icon player-arrow" aria-hidden="true">
       <use xlink:href="#icon-icverticleright-copy"></use>
     </svg>
-    <audio src="" autoplay></audio>
   </div>
     `,
     render() {
         $(this.el).html(this.template)
+    },
+    init() {
+        this.$el = $(this.el)
     }
 }
 
 let model = {
-
+    data: {
+        song: {},
+        audio: {}
+    }
 }
 
 let controller = {
@@ -43,10 +48,39 @@ let controller = {
         this.view = view
         this.model = model
         this.view.render()
+        this.view.init()
+        this.bindEvents()
         this.bindEventHub()
     },
+    bindEvents(){
+        $(this.view.el).on('click', '#playButton', (e) => {
+            $('#player').addClass('playing')
+            beActive('#currentPause')
+            this.model.data.audio.play()
+        })
+
+        $(this.view.el).on('click', '#pauseButton', (e) => {
+            $('#player').removeClass('playing')
+            beActive('#currentPlay')
+            this.model.data.audio.pause()
+        })
+
+        this.view.$el.on('click', '#close', () => {
+            disActive('#player')
+            location.hash = location.hash.replace('-y', '-n')
+        })
+    
+    
+    },
     bindEventHub() {
-       
+        window.eventHub.on('playSong', (data) => {
+            console.log(data)
+            let songUrl = data
+            this.model.data.audio = new Audio(songUrl)
+            $('#player').addClass('playing')
+            beActive('#currentPause')
+            this.model.data.audio.play()
+        }) 
     }
 }
 

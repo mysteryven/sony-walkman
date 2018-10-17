@@ -14,9 +14,7 @@
         </button>
         </div>
     </form>
-    <p id="playingAudio">
-        <audio autoplay controls></audio>
-    </p>
+    
     <ul class="playList" id="playList">
         <li>
             <div class="item">
@@ -107,11 +105,5 @@
 
     controller.init(view, model)
 
-    window.eventHub.on('playSong', (data) => {
-        console.log(data)
-        let songUrl = data
-        $(`#playingAudio`).empty().append(`
-            <audio src='${songUrl}' controls></audio>
-        `)
-    }) 
+    
 }
