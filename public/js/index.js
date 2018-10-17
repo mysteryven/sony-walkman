@@ -36,7 +36,6 @@
     })
 
     function toggleActive(e) {
-        console.log(e.currentTarget)
         $(e).toggleClass('active');
     }
 
