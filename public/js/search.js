@@ -66,7 +66,6 @@
             })
         },
         getCurrentSong(songId) {
-            
             if (songId) { 
                 return axios.get('/song/url?id=' + songId).then((response) => {
                         this.data.currentSong.url = response.data.data[0].url
@@ -76,6 +75,7 @@
         getCurrentCover(albumId) {
             if (albumId) {
                 return axios.get('/album?id=' + albumId).then((response) => {
+                    console.log(response)
                     this.data.currentSong.cover = response.data.album.picUrl
                 })
             }

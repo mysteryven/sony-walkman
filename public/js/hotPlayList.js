@@ -19,7 +19,7 @@
                 this.$el.find('ul').empty()
                 playlists.map((data) => {
                     let li = `
-                    <li>
+                    <li id=${data.id}>
                         <img src=${data.coverImgUrl} width=113 height=113>
                         <div>
                             <span class="playListName">${data.name}</span>
@@ -43,6 +43,7 @@
                 this.data.playlists = response.data.playlists
             })
         }
+        
     }
 
     let controller = {
@@ -54,7 +55,14 @@
             this.model.getHotPlayList().then(()=>{
                 this.view.render(this.model.data.playlists)
             })
+            this.bindEvents()
         },
+        bindEvents() {
+            this.view.$el.find('ul').on('click', 'li', (e) => {
+                let playlistId = $(e.currentTarget).attr('id')
+                window.eventHub.emit('openPlaylist', playlistId)
+            })
+        }
     }
 
     controller.init(view, model) 

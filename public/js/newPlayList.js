@@ -9,13 +9,6 @@
             </svg>
         </h5>
         <ul>
-            <li>
-              <img src="./img/girl.jpeg" width=113px height=113px>
-              <div>
-                <span>寻找周杰伦</span>
-                <span>周杰伦</span>
-              </div>
-            </li>
         </ul> 
         `,
         init() {
@@ -24,11 +17,10 @@
         render(newSongList) {
             if (newSongList) {
                 this.$el.find('ul').empty()
-                
                 newSongList.map((data) => {
                     let li = `
                     <li>
-                        <img src=${data.cover} width=113px height=113px>
+                        <img src=${data.cover || ''} width=113px height=113px>
                         <div>
                             <span>${data.name}</span>
                             <span>${data.artist}</span>
@@ -50,7 +42,6 @@
         getNewSong() {
             return axios.get('/personalized/newsong?limit=8').then((response) => {
                 let songItem = response.data.result.map((data, index) => {
-                    if (index === 9) {return}
                     return {
                         id: data.id,
                         name: data.name,
@@ -58,6 +49,7 @@
                         artist: data.song.artists[0].name
                     }
                 })
+                songItem.splice(songItem.length-1)
                 this.data.newSongList = songItem
             })
         }
