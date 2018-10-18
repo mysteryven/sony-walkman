@@ -78,25 +78,25 @@
         },
         bindEventHub() {
             window.eventHub.on('playSong', (data) => {
-                console.log(data)
-                let {url, cover, name, artist} = data
-
-                this.view.$el.find('#songContainer').removeAttr('src')
-                this.view.$el.find('#songContainer').attr('src', url)
-                $('#songContainer').empty()
-                let audio = `<audio src=${url} style="display: none"></audio>`
-                $('#songContainer').html(audio)
-                document.querySelector('#songContainer audio').play()
-                $('#player').addClass('playing')
-                beActive('#currentPause')
-
-                this.view.$el.find('#playerCover').css({
-                    'background-image': `url(${cover})`
-                })
-
-                this.view.$el.find('.player-information .name').html(name)
-                this.view.$el.find('.player-information .artist').html(artist)
+                this.initSong(data)
             })
+        },
+        initSong({url, cover, name, artist}) {
+            this.view.$el.find('#songContainer').removeAttr('src')
+            this.view.$el.find('#songContainer').attr('src', url)
+
+            $('#songContainer').empty()
+            let audio = `<audio src=${url} style="display: none"></audio>`
+            $('#songContainer').html(audio)
+            document.querySelector('#songContainer audio').play()
+            $('#player').addClass('playing')
+            beActive('#currentPause')
+            this.view.$el.find('#playerCover').css({
+                'background-image': `url(${cover})`
+            })
+
+            this.view.$el.find('.player-information .name').html(name)
+            this.view.$el.find('.player-information .artist').html(artist)
         }
     }
 
