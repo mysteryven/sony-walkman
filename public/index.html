@@ -74,40 +74,10 @@
           </ul>
         </section>
         <section class="page-find">
-          <h5>
-            <span>推荐歌单</span>
-            <svg class="icon arrow" aria-hidden="true" id="controlSongList">
-              <use xlink:href="#icon-rightarrow"></use>
-            </svg>
-          </h5>
-          <ul>
-            <li>
-              <img src="./img/girl.jpeg" width=113px height=113px>
-              <div>
-                <span>寻找周杰伦</span>
-                <span>周杰伦</span>
-              </div>
-            </li>
-          </ul>
-          <h5>
-            <span>最近音乐</span>
-            <svg class="icon arrow" aria-hidden="true" id="controlSongList">
-              <use xlink:href="#icon-rightarrow"></use>
-            </svg>
-          </h5>
-          <ul>
-            <li>
-              <img src="./img/girl.jpeg" width=113px height=113px>
-              <div>
-                <span>寻找周杰伦</span>
-                <span>周杰伦</span>
-              </div>
-            </li>
-          </ul>
+          <div id="hotPlayList"></div>
+          <div id="newPlayList"></div>
         </section>
-        <section class="page-search" id="searchPage">
-          
-        </section>
+        <section class="page-search" id="searchPage"></section>
       </div>
       <div class="song-list" id="songList">
         <div class="song-list-header">
@@ -135,23 +105,7 @@
         </div>
       </div>
       <footer id="currentSong">
-        <div class="current-cover">
-          <img src="./img/cover.jpeg" alt="" width=50 height=50>
-        </div>
-        <div class="current-info">
-          <div class="song-info">
-            <span>千本樱</span>
-            <span>Animenzzz && Aayase</span>
-          </div>
-          <div>
-            <svg class="icon current-play active" aria-hidden="true" id="currentPlay">
-              <use xlink:href="#icon-play1"></use>
-            </svg>
-            <svg class="icon current-play" aria-hidden="true" id="currentPause">
-              <use xlink:href="#icon-pause"></use>
-            </svg>
-          </div>
-        </div>
+        
       </footer>
       <section class="player" id="player"></section>
     </main>
@@ -167,5 +121,8 @@
   <script src="./js/router.js"></script>
   <script src="./js/search.js"></script>
   <script src="./js/play.js"></script>
+  <script src="./js/foot.js"></script>
+  <script src="./js/hotPlayList.js"></script>
+  <script src="./js/newPlayList.js"></script>
 </body>
 </html>

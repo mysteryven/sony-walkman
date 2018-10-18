@@ -4,7 +4,7 @@
         template: `
         <form>
             <div>
-            <input type="text" placeholder="歌名/歌手" id="songName">
+            <input type="text" placeholder="搜索音乐, 歌手" id="songName">
             </div>
             <div>
             <button type="submit">
@@ -88,9 +88,9 @@
             this.model = model
             this.view.render()
             this.view.init()
-            this.bindEvent()
+            this.bindEvents()
         },
-        bindEvent() {
+        bindEvents() {
             this.view.$el.on('submit', 'form', (e) => {
                 e.preventDefault()
                 let songName = $('#songName').val()
@@ -101,7 +101,7 @@
 
             this.view.$el.on('click', 'ul#playList > li', (e) => {
                 let songId = $(e.currentTarget).attr('id')
-                this.initCurrentSong()
+                this.initCurrentSong(e)
                 
                 this.model.getCurrentSong(songId)
                     .then(() => {
@@ -111,7 +111,7 @@
                 })
             })
         },
-        initCurrentSong() {
+        initCurrentSong(e) {
             this.model.data.currentSong.albumId = $(e.currentTarget).attr('data-albumid')
             this.model.data.currentSong.name = $(e.currentTarget).attr('data-name')
             this.model.data.currentSong.artist = $(e.currentTarget).attr('data-artist')

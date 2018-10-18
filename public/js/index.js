@@ -13,16 +13,7 @@
 
    
     
-    $('#currentPlay').on('click', (e) => {
-        beActive('#currentPause')
-        $('#player').addClass('playing')
-        e.stopPropagation()
-    })
-    $('#currentPause').on('click', (e) => {
-        beActive('#currentPlay')
-        e.stopPropagation()
-        $('#player').removeClass('playing')
-    })
+    
 
     $('#createSongList li').on('click', () => {
         $('#songList').css({

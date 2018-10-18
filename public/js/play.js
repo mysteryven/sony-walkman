@@ -80,6 +80,16 @@
             window.eventHub.on('playSong', (data) => {
                 this.initSong(data)
             })
+
+            window.eventHub.on('playClick', (data) => {
+                console.log(1)
+                document.querySelector('#songContainer audio').play()
+            })
+            
+            window.eventHub.on('pauseClick', (data) => {
+                console.log(2)
+                document.querySelector('#songContainer audio').pause()
+            })
         },
         initSong({url, cover, name, artist}) {
             this.view.$el.find('#songContainer').removeAttr('src')

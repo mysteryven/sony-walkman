@@ -44,3 +44,10 @@ main section.page-find .icon.arrow {
     top: 2px;
     left: -4px;
 }
+
+.playListName {
+    width: 110px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
