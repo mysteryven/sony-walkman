@@ -4,7 +4,7 @@
         template: `
     <form>
         <div>
-        <input type="text" placeholder="歌名" id="songName">
+        <input type="text" placeholder="歌名/歌手" id="songName">
         </div>
         <div>
         <button type="submit">
@@ -36,7 +36,10 @@
                     let artist = data.artists[0].name || ''
                     let album = data.album.name || ''
                     let li = `
-                <li id="${data.id}">
+                <li id="${data.id}"
+                    data-name="${songName}"
+                    data-artist="${artist}"
+                    data-albumId="${data.album.id}">
                     <div class="item">
                         <span>${songName}</span>
                         <span>${artist}</span>
@@ -57,19 +60,30 @@
     let model = {
         data: {
             songs: [],
-            currentSong: ''
+            currentSong: {}
         },
         getSongs(songName) {
             return axios.get('/search?keywords=' + songName).then((response) => {
+                console.log(response)
                 this.data.songs = response.data.result.songs
-                return this.songs
+                return this.data.songs
             })
         },
         getCurrentSong(songId) {
-            return axios.get('/song/url?id=' + songId).then((response) => {
-                console.log(response)
-                this.data.currentSong = response.data.data[0].url
-            })
+            console.log('currentsong')
+            if (songId) { 
+                return axios.get('/song/url?id=' + songId).then((response) => {
+                        this.data.currentSong.url = response.data.data[0].url
+                    })
+            }
+            
+        },
+        getCurrentCover(albumId) {
+            if (albumId) {
+                return axios.get('/album?id=' + albumId).then((response) => {
+                    this.data.currentSong.cover = response.data.album.picUrl
+                })
+            }
         }
 
     }
@@ -87,18 +101,22 @@
                 e.preventDefault()
                 let songName = $('#songName').val()
                 this.model.getSongs(songName).then(() => {
-                    console.log(this.model.data.songs)
                     this.view.render(this.model.data.songs)
                 })
             })
             this.view.$el.on('click', 'ul#playList > li', (e) => {
-                console.log(e.currentTarget)
                 let songId = $(e.currentTarget).attr('id')
+                this.model.data.currentSong.albumId = $(e.currentTarget).attr('data-albumid')
+                this.model.data.currentSong.name = $(e.currentTarget).attr('data-name')
+                this.model.data.currentSong.artist = $(e.currentTarget).attr('data-artist')
+                
                 this.model.getCurrentSong(songId)
                     .then(() => {
-                        window.eventHub.emit('playSong', this.model.data.currentSong)
+                        this.model.getCurrentCover(this.model.data.currentSong.albumId).then(() => {
+                            window.eventHub.emit('playSong', this.model.data.currentSong)
+                        })
                     })
-            })
+                })
         }
 
     }
