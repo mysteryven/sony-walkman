@@ -20,12 +20,7 @@
             'transform': 'translateX(0px)',
         })
     })
-    $('#back').on('click', () => {
-        $('#songList').css({
-            'transform': 'translateX(375px)',
-        })
-    })
-
+    
     function toggleActive(e) {
         $(e).toggleClass('active');
     }
