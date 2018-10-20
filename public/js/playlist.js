@@ -112,7 +112,7 @@
                     this.model.getSongs().then(()=> {
                         this.view.render(this.model.data.songs)
                         $('#songList').css({
-                            'transform': 'translateX(0px)',
+                            'transform': 'translateX(-10px)',
                         })
                     })
                 })

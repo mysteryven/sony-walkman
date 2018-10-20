@@ -59,7 +59,6 @@
             })
         },
         initSong(data) {
-            console.log(data)
             this.view.$el.find('.songCover').attr('src', data.cover)
             this.view.$el.find('.songName').html(data.name)
             this.view.$el.find('.songArtist').html(data.artist)
