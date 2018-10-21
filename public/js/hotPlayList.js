@@ -59,8 +59,14 @@
         },
         bindEvents() {
             this.view.$el.find('ul').on('click', 'li', (e) => {
+                let index = $(e.currentTarget).index()
                 let playlistId = $(e.currentTarget).attr('id')
-                window.eventHub.emit('openPlaylist', playlistId)
+                let obj = {
+                    playlistId: playlistId,
+                    playlistCover: this.model.data.playlists[index].coverImgUrl,
+                    playlistName: this.model.data.playlists[index].name
+                }
+                window.eventHub.emit('openPlaylist', obj)
             })
         }
     }

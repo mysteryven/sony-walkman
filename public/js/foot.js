@@ -7,8 +7,8 @@
         </div>
         <div class="current-info">
         <div class="song-info">
-        <span class="songName">千本樱</span>
-        <span class="songArtist">Animenzzz && Aayase</span>
+        <span class="songName hideOverflow">千本樱</span>
+        <span class="songArtist hideOverflow">Animenzzz && Aayase</span>
         </div>
         <div>
         <svg class="icon current-play active" aria-hidden="true" id="currentPlay">

@@ -5,3 +5,7 @@ main footer .current-cover img { border-radius: 4px; }
 main footer .current-info { flex-grow: 1; padding-left: 8px; display: flex;
 	justify-content: space-between; align-items: center; }
 main footer .current-info .song-info { display: flex; flex-direction: column; }
+main footer .current-info .song-info .songName,
+main footer .current-info .song-info .songArtist {
+	width: 260px;
+}

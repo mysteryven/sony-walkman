@@ -10,9 +10,9 @@
         </div>
         <div class="song-list-info">
             <div class="song-list-cover">
-            <img src="./img/girl.jpeg" alt="" width=100 height=100>
+            <img id="playlistCover" src="" alt="" width=100 height=100>
             <div>
-                <span>歌单名称</span>
+                <span id="playlistName">{{playlistName}}</span>
             </div>
             </div>
             <ul>
@@ -29,10 +29,14 @@
         init() {
             this.$el = $(this.el)
         },
-        render(songs) {
-            if (!songs) {
-                this.$el.html(this.template)
-            } else {
+        render(songs, data) {
+            this.$el.html(this.template)
+            if (data) {
+                this.$el.find('#playlistCover').attr('src', data.playlistCover)
+                this.$el.find('#playlistName').html(data.playlistName)
+            }
+            console.log(this.template)
+            if (songs) {
                 this.$el.find('ul').empty()
                 songs.map((data, index) => {
                     let li = `
@@ -40,15 +44,12 @@
                         <div class="index">${index+1}</div>
                         <div class="song-info">
                             <span>${data.name}</span>
-                            <span>${data.artists}</span>
+                            <span>${data.artist}</span>
                         </div>  
                     </li>
                     ` 
                     this.$el.find('ul').append(li)
-                   
                 })
-
-               
             }
         }
     }
@@ -65,7 +66,6 @@
         },
         getSongs() {
             this.data.songs = []
-            console.log('clear')
             return new Promise((resolve, reject) => {
                 let songIds = this.data.songIds
                 for(let i = 0; i < songIds.length; i++) {
@@ -73,6 +73,7 @@
                         let url = response.data.data[0].url
                         return axios.get('/song/detail?ids=' + songIds[i].id).then((res)=> {
                             let name = res.data.songs[0].name
+                            let cover = res.data.songs[0].al.picUrl
                             let artists = ''
                             res.data.songs[0].ar.map((data, index) => {
                                 if (index === 0) {
@@ -84,7 +85,8 @@
                             let item = {
                                 url: url,
                                 name: name,
-                                artists: artists
+                                artist: artists,
+                                cover: cover
                             }
                             this.data.songs.push(item)
                             if (i === songIds.length-1) {
@@ -108,11 +110,12 @@
         },
         bindEventHub() {
             window.eventHub.on('openPlaylist', (data) => {
-                this.model.getPlaylist(data).then(() => {
+                console.log(data)
+                this.model.getPlaylist(data.playlistId).then(() => {
                     this.model.getSongs().then(()=> {
-                        this.view.render(this.model.data.songs)
+                        this.view.render(this.model.data.songs, data)
                         $('#songList').css({
-                            'transform': 'translateX(-10px)',
+                            'transform': 'translateX(0px)',
                         })
                     })
                 })
@@ -120,12 +123,14 @@
         },
         bindEvents() {
             this.view.$el.on('click', '#back', () => {
-                console.log(111)
                 $('#songList').css({
-                    'transform': 'translateX(370px)',
+                    'transform': 'translateX(380px)',
                 })
             })
-            
+            this.view.$el.on('click', 'ul > li', (e) => {
+                let index = $(e.currentTarget).index()
+                window.eventHub.emit('playSong', this.model.data.songs[index])
+            })
         }
     }
 

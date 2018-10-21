@@ -1,5 +1,5 @@
 .song-list {
-    width: 390px;
+    width: 375px;
     height: 560px;
     position: absolute;
     left: 0px;
@@ -43,7 +43,7 @@
 .song-list-info {
     overflow-y: scroll;
     height: 100%;
-    width: 410px;
+    width: 400px;
     transform: translateX(-8px);
 }
 .song-list-info ul{
@@ -53,6 +53,8 @@
     border-top-right-radius: 18px;
     margin: -16px auto 0 auto;
     padding-top: 20px;
+    position: relative;
+    left: -6px;
 }
 .song-list-info ul li {
     display: flex;
