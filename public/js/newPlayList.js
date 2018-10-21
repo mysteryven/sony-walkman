@@ -41,6 +41,7 @@
         },
         getNewSong() {
             return axios.get('/personalized/newsong?limit=8').then((response) => {
+                console.log(response)
                 let songItem = response.data.result.map((data, index) => {
                     return {
                         id: data.id,
@@ -64,6 +65,19 @@
             this.model.getNewSong().then(() => {
                 this.view.render(this.model.data.newSongList)
             })
+            this.bindEvents()
+        },
+        bindEvents() {
+           this.view.$el.on('click', 'ul > li', (e) => {
+                let index = $(e.currentTarget).index()
+                console.log(this.model.data.newSongList[index])
+                let obj = this.model.data.newSongList[index] 
+                axios.get('/song/url?id=' + obj.id).then((response) => {
+                    console.log(response)
+                    obj.url = response.data.data[0].url
+                    window.eventHub.emit('playSong', obj)
+                })
+           }) 
         }
     }
 

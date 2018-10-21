@@ -35,7 +35,6 @@
                 this.$el.find('#playlistCover').attr('src', data.playlistCover)
                 this.$el.find('#playlistName').html(data.playlistName)
             }
-            console.log(this.template)
             if (songs) {
                 this.$el.find('ul').empty()
                 songs.map((data, index) => {

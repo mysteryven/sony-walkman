@@ -32,10 +32,17 @@ main section.page-find ul li div {
 }
 main section.page-find ul li div span:first-child {
     font-size: 12px;
+    width: 110px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 main section.page-find ul li div span:last-child {
     font-size: 10px;
     color: rgb(126, 123, 123);
+    width: 110px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: none;
 }
 main section.page-find .icon.arrow {
     width: 17px;
@@ -43,6 +50,7 @@ main section.page-find .icon.arrow {
     position: relative;
     top: 2px;
     left: -4px;
+    word-wrap: none;
 }
 
 .playListName {
