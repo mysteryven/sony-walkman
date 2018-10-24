@@ -36,10 +36,10 @@
         </div>
         <ul id="switchTab">
           <li class="active" id="my">
-            <a href="/my">我的</a>
+            <a href="/my">换肤</a>
           </li>
           <li id="find">
-            <a href="/find">发现</a>
+            <a href="/find">音乐库</a>
           </li>
           <li id="search">
             <a href="/search">搜索</a>
@@ -48,30 +48,78 @@
       </nav>
       <div class="pages" id="pages">
         <section class="page-my">
-          <h5>
-            <svg class="icon arrow song-list-control" aria-hidden="true" id="controlSongList">
-              <use xlink:href="#icon-arrow-down"></use>
-            </svg>
-            <span>创建的歌单</span>
-          </h5>
-          <ul class="active" id="createSongList">
-            <li>
-              <div class="song-cover">
-                <img src="./img/cover.jpeg" alt="" width=60 height=60>
-              </div>
-              <div class="song-right">
-                <div class="song-info">
-                  <div>歌单名称</div>
-                  <div>100首</div>
-                </div>
-                <div>
-                  <svg class="icon operation" aria-hidden="true">
-                    <use xlink:href="#icon-verticaldots"></use>
-                  </svg>
-                </div>
-              </div>
-            </li>
-          </ul>
+          <style>
+            .page-my {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-around;
+            }
+            .themes, .shell {
+              height: 500px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
+            .themes h4, .shell h4{
+              margin-bottom: 20px;
+            }
+            .themes > div, .shell div {
+              width: 64px;
+              height: 64px;
+              margin-bottom: 10px;
+              border-radius: 50%;
+              border: 2px solid rgba(0, 0, 0, 0.1);
+            }
+            .themes > div.active {
+              width: 81px;
+              height: 81px;
+            }
+            .themes > .red {
+              background-color: #e82220;
+            }
+            .themes > .pink {
+              background-color: #fb7299; 
+            }
+            .themes > .green {
+              background-color: #09ba72;
+            }
+            .themes button {
+              padding: 10px 84px;
+              outline: none;
+
+            }
+            .shell > div.active {
+              width: 70px;
+              height: 70px;
+            }
+            .shell > .black{
+              background-color: #444444;
+            }
+            .shell > .white{
+              background-color: white; 
+            }
+            .shell > .gold {
+              background-color: #fddd9a;
+            }
+            .shell button {
+              padding: 10px 84px;
+              outline: none;
+            }
+          </style>
+          <div class="themes">
+            <h4>切换主题</h4>
+            <div class="red active"></div>
+            <div class="pink"></div>
+            <div class="green"></div>
+          </div>
+          <div class="shell"> 
+              <h4>切换外壳</h4>
+              <div class="black active"></div>
+              <div class="white"></div>
+              <div class="gold"></div> 
+          </div>
+          
         </section>
         <section class="page-find">
           <div id="hotPlayList"></div>
