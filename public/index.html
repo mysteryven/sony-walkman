@@ -18,6 +18,8 @@
   <link rel="stylesheet" href="./css/theme.css">
 </head>
 <body>
+  <div style="background-image: url(./img/bg.jpg); width: 400px; height: 300px;position: fixed;
+    top: 4px; left: 0px; background-size: cover;"></div>
   <div class="container">
     <header>
       <svg class="icon logo-header" aria-hidden="true">
@@ -25,31 +27,11 @@
       </svg>
     </header>
     <main>
-      <nav>
-        <div class="status-bar">
-          <svg class="icon wifi" aria-hidden="true">
-            <use xlink:href="#icon-wifi"></use>
-          </svg>
-          <svg class="icon battery" aria-hidden="true">
-            <use xlink:href="#icon-tecbatterycha"></use>
-          </svg>
-          <span class="time" id="timer"></span>
-        </div>
-        <ul id="switchTab">
-          <li class="active" id="my">
-            <a href="/my">换肤</a>
-          </li>
-          <li id="find">
-            <a href="/find">音乐库</a>
-          </li>
-          <li id="search">
-            <a href="/search">搜索</a>
-          </li>
-        </ul>
+      <nav id="nav">
+        
       </nav>
       <div class="pages" id="pages">
-        <section class="page-my" id="theme">
-        </section>
+        <section class="page-my" id="theme"></section>
         <section class="page-find">
           <div id="hotPlayList"></div>
           <div id="newPlayList"></div>
@@ -67,7 +49,6 @@
   <script src="./js/eventHub.js"></script>
   <script src="./js/index.js"></script>
   <script src="./js/clock.js"></script>
-  <script src="./js/router.js"></script>
   <script src="./js/search.js"></script>
   <script src="./js/play.js"></script>
   <script src="./js/foot.js"></script>
@@ -75,5 +56,6 @@
   <script src="./js/newPlaylist.js"></script>
   <script src="./js/playlist.js"></script>
   <script src="./js/theme.js"></script>
+  <script src="./js/nav.js"></script>
 </body>
 </html>

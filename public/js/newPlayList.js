@@ -22,8 +22,8 @@
                     <li>
                         <img src=${data.cover || ''} width=113px height=113px>
                         <div>
-                            <span>${data.name}</span>
-                            <span>${data.artist}</span>
+                            <span class="hideOverflow">${data.name}</span>
+                            <span class="hideOverflow">${data.artist}</span>
                         </div>
                     </li>
                     `

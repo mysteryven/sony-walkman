@@ -11,10 +11,6 @@
        $ul.toggleClass('active')
     })
 
-   
-    
-    
-
     $('#createSongList li').on('click', () => {
         $('#songList').css({
             'transform': 'translateX(0px)',

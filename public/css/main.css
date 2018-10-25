@@ -1,6 +1,7 @@
 li {cursor: pointer; }
-main { width: 375px; height: 640px; border: 1px solid #6e6e6e;
-    background-color: white; margin: 0 auto; position: relative; overflow: hidden;}
+main { width: 375px; height: 655px; border: 1px solid #6e6e6e;
+    background-color: white; margin: 0 auto; position: relative; overflow: hidden;
+    border-radius: 6px;}
 main nav .status-bar { background-color: #282828; text-align: right; padding-right: 4px; }
 main nav .status-bar svg { margin-left: 4px; }
 
@@ -9,7 +10,6 @@ main .all-page {
     border: 1px solid red;
     transition: transform 0.1s;
 }
-
 
 main nav ul{ z-index: 1; border-bottom: 1px solid #eee; text-align: center;
     padding: 8px; background-color: #09ba72; font-weight: 500; }

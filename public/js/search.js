@@ -39,9 +39,9 @@
                         data-artist="${artist}"
                         data-albumId="${data.album.id}">
                         <div class="item">
-                            <span>${songName}</span>
-                            <span>${artist}</span>
-                            <span>${album}</span>
+                            <span class="hideOverflow">${songName}</span>
+                            <span class="hideOverflow">${artist}</span>
+                            <span class="hideOverflow">${album}</span>
                         </div>
                     </li> 
                     `

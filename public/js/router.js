@@ -1,7 +1,7 @@
 {
     selectTab()
 
-    $('#switchTab > li > a').on('click', (e) => {
+    $('.container').find('#switchTab > li > a').on('click', (e) => {
         e.preventDefault()
 
         location.hash = e.currentTarget.getAttribute('href') + '-n'
@@ -10,9 +10,10 @@
 
     function selectTab() {
         let str = location.hash
+        console.log(str.substring(2, str.length-2))
         let currentTab = str.substring(2, str.length-2) || 'my'
-
-        $('#' + currentTab).addClass('active').siblings('.active').removeClass('active')
+        console.log(currentTab)
+        $('.container').find('#' + currentTab).addClass('active').siblings('.active').removeClass('active')
         
         let index = $('#' + currentTab).index()
         $('#pages').css({

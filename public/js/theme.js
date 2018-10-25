@@ -13,6 +13,7 @@
             <div class="themes" id="shell">
                 <div class="black active"></div>
                 <div class="gold"></div>
+                <div class="white"></div>
             </div>
         </div> 
         `,
@@ -32,12 +33,17 @@
         },
         bindEvents() {
             $(this.view.el).find('#topBarTheme > div').on('click', (e) => {
+                let bgColor = $(e.currentTarget).css('background-color')
                 $(e.currentTarget).addClass('active')
                     .siblings('.active').removeClass('active')
+                eventHub.emit('changeTabBarColor', bgColor)
             })
             $(this.view.el).find('#shell > div').on('click', (e) => {
+                let bgColor = $(e.currentTarget).css('background-color')
                 $(e.currentTarget).addClass('active')
                     .siblings('.active').removeClass('active')
+                
+                $('.container').css('background-color', bgColor)
             })
         }
     }

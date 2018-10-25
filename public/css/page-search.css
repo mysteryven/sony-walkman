@@ -39,7 +39,9 @@
     display: flex;
     flex-direction: column;
 }
-
+.playList li .item span {
+    width: 310px;
+}
 .playList li .item span:first-child {
     color: #1e6faa;
     font-weight: 500;

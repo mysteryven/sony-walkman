@@ -7,15 +7,18 @@
       <use xlink:href="#icon-arrow-down"></use>
     </svg>
     </div>
-  <div id="playerCover" class="player-cover" style="background-image: url(./img/girl.jpeg)"> </div>
+  <div id="playerCover" class="player-cover" 
+    style="background-image: url(../img/cover.jpeg)"> </div>
   <div class="player-information">
-    <h2 class='name'>Name</h2>
-    <div class='artist'>Singer</div>
+    <h2 class='name'></h2>
+    <div class='artist'></div>
   </div>
   <div class="player-controllers">
+    <!--    
     <svg class="icon player-arrow" aria-hidden="true">
       <use xlink:href="#icon-right-arrow-copy"></use>
     </svg>
+    -->
     <div>
       <svg class="icon player-play" aria-hidden="true" id="playButton">
         <use xlink:href="#icon-play1"></use>
@@ -24,9 +27,11 @@
         <use xlink:href="#icon-pause"></use>
       </svg>
     </div>
+    <!--
     <svg class="icon player-arrow" aria-hidden="true">
       <use xlink:href="#icon-icverticleright-copy"></use>
     </svg>
+    -->
   </div>
   <div id="songContainer">
    
