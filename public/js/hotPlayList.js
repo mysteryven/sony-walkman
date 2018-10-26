@@ -64,9 +64,13 @@
                 let obj = {
                     playlistId: playlistId,
                     playlistCover: this.model.data.playlists[index].coverImgUrl,
-                    playlistName: this.model.data.playlists[index].name
+                    playlistName: this.model.data.playlists[index].name,
+                    tags: this.model.data.playlists[index].tags.join('、')
                 }
                 window.eventHub.emit('openPlaylist', obj)
+                $('.loading').addClass('active')
+                console.log(11)
+
             })
         }
     }

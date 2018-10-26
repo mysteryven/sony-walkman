@@ -7,6 +7,7 @@ main section.page-find {
     height: 520px;
     overflow: auto;
 }
+main section.page-find::-webkit-scrollbar {display:none}
 main section.page-find h5{
     margin: 8px 0 8px 8px;
 }

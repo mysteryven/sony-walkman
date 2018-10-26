@@ -10,7 +10,7 @@
   <div id="playerCover" class="player-cover" 
     style="background-image: url(../img/cover.jpeg)"> </div>
   <div class="player-information">
-    <h2 class='name'></h2>
+    <h2 class='name'>发现好音乐</h2>
     <div class='artist'></div>
   </div>
   <div class="player-controllers">

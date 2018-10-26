@@ -1,6 +1,6 @@
 .song-list {
     width: 375px;
-    height: 560px;
+    height: 565px;
     position: absolute;
     left: 0px;
     top: 24px;
@@ -8,6 +8,7 @@
     transform: translateX(375px);
     transition: transform 0.3s;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 .song-list-header {
     background-color: rgba(104, 99, 99, 0.6);
@@ -54,18 +55,30 @@
     margin: -16px auto 0 auto;
     padding-top: 20px;
     position: relative;
-    left: -6px;
+    left: 4px;
 }
 .song-list-info ul li {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
+.song-list-info ul li:last-child {
+    margin-bottom: 18px;
+}
 .song-list-info ul li .index{
     width: 54px;
     text-align: center;
     color: #616161;
     font-size: 18px;
+}
+.song-list-info .description {
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 89px;
+}
+.song-list-info .description span:last-child {
+    font-size: 10px
 }
 .song-list-info ul li .song-info {
     padding: 10px 10px 10px 0;

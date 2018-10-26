@@ -11,8 +11,9 @@
         <div class="song-list-info">
             <div class="song-list-cover">
             <img id="playlistCover" src="" alt="" width=100 height=100>
-            <div>
+            <div class="description">
                 <span id="playlistName">{{playlistName}}</span>
+                <span id="tags"></span>
             </div>
             </div>
             <ul>
@@ -34,6 +35,7 @@
             if (data) {
                 this.$el.find('#playlistCover').attr('src', data.playlistCover)
                 this.$el.find('#playlistName').html(data.playlistName)
+                this.$el.find('#tags').html(data.tags)
             }
             if (songs) {
                 this.$el.find('ul').empty()
@@ -112,6 +114,7 @@
                 console.log(data)
                 this.model.getPlaylist(data.playlistId).then(() => {
                     this.model.getSongs().then(()=> {
+                        $('.loading').removeClass('active')
                         this.view.render(this.model.data.songs, data)
                         $('#songList').css({
                             'transform': 'translateX(0px)',
