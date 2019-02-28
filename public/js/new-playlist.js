@@ -41,7 +41,6 @@
         },
         getNewSong() {
             return axios.get('/personalized/newsong?limit=8').then((response) => {
-                console.log(response)
                 let songItem = response.data.result.map((data, index) => {
                     return {
                         id: data.id,
