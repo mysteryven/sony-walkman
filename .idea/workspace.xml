@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec33f1e3-060e-47c1-baf3-c954805ba0a1" name="Default Changelist" comment="" />
+    <list default="true" id="ec33f1e3-060e-47c1-baf3-c954805ba0a1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -51,37 +53,18 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-140478367">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/css/icon.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -102,9 +85,18 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+    </packageJsonPaths>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1280" />
+    <option name="x" value="25" />
+    <option name="y" value="24" />
+    <option name="width" value="1199" />
     <option name="height" value="777" />
   </component>
   <component name="ProjectView">
@@ -120,17 +112,6 @@
               <item name="sony-walkman" type="b2602c69:ProjectViewProjectNode" />
               <item name="sony-walkman" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="sony-walkman" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sony-walkman" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sony-walkman" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sony-walkman" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -143,7 +124,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="com.maddyhome.idea.vim.ui.VimEmulationConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -168,6 +149,7 @@
       <option name="presentableId" value="Default" />
       <updated>1538572696116</updated>
       <workItem from="1538572697948" duration="4543000" />
+      <workItem from="1544930109983" duration="107000" />
     </task>
     <task id="LOCAL-00001" summary="done basic thing">
       <created>1538577689714</created>
@@ -180,15 +162,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4543000" />
+    <option name="totallyTimeSpent" value="4650000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="777" extended-state="0" />
-    <editor active="true" />
+    <frame x="25" y="24" width="1199" height="777" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12946783" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Structure" order="0" side_tool="true" visible="true" weight="0.24978392" />
+      <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -204,6 +184,7 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Project" order="3" weight="0.20829733" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +232,7 @@
     <entry file="file://$PROJECT_DIR$/src/css/icon.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
-          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
