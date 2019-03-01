@@ -13,7 +13,7 @@
         </div>
         <ul id="switchTab">
             <li class="active" id="my">
-            <a href="/my">换肤</a>
+            <a href="/my">介绍</a>
             </li>
             <li id="find">
             <a href="/find">音乐库</a>

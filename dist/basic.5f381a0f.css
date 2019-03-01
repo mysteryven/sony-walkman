@@ -1,0 +1,29 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {background-color: #aadcdb;margin-top: 40px; }
+
+ul, ol { list-style: none; }
+.container { background-color: #444444; width: 390px; height: 700px; 
+    margin: 0px auto 0px auto; border-radius: 20px; position: relative;
+    box-shadow: 4px 2px 16px #404040; border: 1px solid #7d7d7d; }
+
+.time { color: white; }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+box-shadow:0 0 0 60px #eee inset;
+-webkit-text-fill-color: #878787;
+}
+
+.hideOverflow {
+    display: inline-block; 
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow:ellipsis;
+}
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+li {cursor: pointer; }
+main { width: 375px; height: 655px; border: 1px solid #6e6e6e;
+    background-color: white; margin: 0 auto; position: relative; overflow: hidden;
+    border-radius: 6px;}
+main nav .status-bar { background-color: #282828; text-align: right; padding-right: 4px; }
+main nav .status-bar svg { margin-left: 4px; }
+
+main .all-page {
+    width: 740px;
+    border: 1px solid red;
+    transition: transform 0.1s;
+}
+
+main nav ul{ z-index: 1; border-bottom: 1px solid #eee; text-align: center;
+    padding: 8px; background-color: #09ba72; font-weight: 500; }
+main nav ul { display: flex; justify-content: space-around; color: #ddd; }
+main nav ul li a { cursor: pointer; display: inline-block; padding-bottom: 2px; text-decoration: none; color: inherit;}
+main nav ul li.active { color: white; }
+main nav ul li.active::after { content: ''; display: block; width: 100%; height: 3px; border-radius: 4px;
+    background-color: white; }
+
+main div.pages { transition: transform 0.4s; width: 1170px; display: flex; height: 510px;}
+main div.pages section { flex: 1; width: 375px; overflow-x: hidden; overflow-y: scroll;}
+
+.song-cover img{ border-radius: 8px; }
+.song-cover { flex-grow: 0; }
+.song-right { height: 60px; flex-grow: 1; display: flex; justify-content: space-between; 
+    align-items: center; border-bottom: 1px solid #eee; margin-left: 8px; }
+
+.song-list-control { transition: all 0.3s; }
+.song-list-control.active { transform: rotate(-90deg); }
+

@@ -1,6 +1,6 @@
 .song-list {
     width: 375px;
-    height: 565px;
+    height: 576px;
     position: absolute;
     left: 0px;
     top: 24px;
@@ -52,10 +52,10 @@
     background-color: white;
     border-top-left-radius: 18px;
     border-top-right-radius: 18px;
-    margin: -16px auto 0 auto;
+    margin: -16px auto 60px auto;
     padding-top: 20px;
     position: relative;
-    left: 4px;
+    left: -4px;
 }
 .song-list-info ul li {
     display: flex;

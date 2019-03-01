@@ -1,0 +1,62 @@
+.page-my {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.page-my h4 {
+    margin: 12px 4px;
+}
+
+.page-my .shell {
+    margin-top: 44px;
+}
+
+.themes {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.themes div {
+    width: 80px;
+    height: 120px;
+    margin-left: 16px;
+    margin-right: 20px;
+    border-radius: 8px;
+    transition: all 0.3s;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.page-my .partTwo {
+    position: absolute;
+    top: 200px;
+    left: 4px;
+}
+
+.themes div.active {
+    width: 100px;
+    height: 140px;
+}
+
+.red {
+    background-color: #e92101;
+}
+
+.pink {
+    background-color: #fb7299;
+}
+
+.green {
+    background-color: #09ba72;
+}
+
+.black {
+    background-color: #444444;
+}
+
+.gold {
+    background-color: #b8a277;
+}
+.white {
+    background-color: white; 
+}

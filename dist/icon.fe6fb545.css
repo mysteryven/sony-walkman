@@ -1,0 +1,19 @@
+.icon { width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor;
+    overflow: hidden; cursor: pointer;}
+
+svg.logo-header{ width: 80px; height: 30px; display: block;
+    margin: 0 auto; }
+svg.logo-footer{ width: 30px; height: 30px; display: block;
+    position: absolute; bottom: 10px; right: 25px; }
+
+.icon.wifi, .icon.battery { padding-top: 4px; margin-left: 4px;
+    width: 20px; height: 20px; }
+
+.arrow { width: 39px; height: 25px;}
+.icon.operation { width: 24px; height: 30px;}
+.icon.current-play { width: 50px; height: 32px; display: none}
+.icon.current-play.active, .icon.current-pause.active {display: block}
+
+
+.icon.player-play { width: 54px; height: 54px;}
+.icon.player-arrow { width: 44px; height: 44px; cursor: pointer;}

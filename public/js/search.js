@@ -15,13 +15,9 @@
             </div>
         </form>
         <ul class="playList" id="playList">
-            <li>
-                <div class="item">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </li>
+            <div style="margin-left: 32px; color: #7d7d7d">
+            快来使用一下搜索功能吧 ：）
+            </div>
         </ul>
         `,
         render(songs) {

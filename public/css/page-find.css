@@ -1,10 +1,9 @@
 main section.page-find {
     width: 370px;
-    height: 60px;
     position: relative;
     top: 2px;
     left: -4px;
-    height: 520px;
+    height: 526px;
     overflow: auto;
 }
 main section.page-find::-webkit-scrollbar {display:none}
